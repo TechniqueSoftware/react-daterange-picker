@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import createReactClass from 'create-react-class';
+
 import Immutable from 'immutable';
 
 import BemMixin from '../utils/BemMixin';
@@ -13,7 +15,8 @@ import CalendarHighlight from './CalendarHighlight';
 import CalendarSelection from './CalendarSelection';
 
 
-const CalendarDate = React.createClass({
+const CalendarDate = createReactClass({
+  displayName: 'CalendarDate',
   mixins: [BemMixin, PureRenderMixin],
 
   propTypes: {

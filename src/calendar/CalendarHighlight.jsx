@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import BemMixin from '../utils/BemMixin';
@@ -8,7 +9,7 @@ const CalendarHighlight = React.createClass({
   mixins: [BemMixin, PureRenderMixin],
 
   propTypes: {
-    modifier: React.PropTypes.string,
+    modifier: PropTypes.string,
   },
 
   render() {

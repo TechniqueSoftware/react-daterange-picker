@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import BemMixin from './utils/BemMixin';
@@ -9,8 +10,8 @@ const Legend = React.createClass({
   mixins: [BemMixin, PureRenderMixin],
 
   propTypes: {
-    selectedLabel: React.PropTypes.string.isRequired,
-    stateDefinitions: React.PropTypes.object.isRequired,
+    selectedLabel: PropTypes.string.isRequired,
+    stateDefinitions: PropTypes.object.isRequired,
   },
 
   render() {

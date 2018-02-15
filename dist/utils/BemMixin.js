@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -16,18 +20,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var BemMixin = {
   propTypes: {
-    bemNamespace: _react2.default.PropTypes.string,
-    bemBlock: _react2.default.PropTypes.string
+    bemNamespace: _propTypes2.default.string,
+    bemBlock: _propTypes2.default.string
   },
 
   contextTypes: {
-    bemNamespace: _react2.default.PropTypes.string,
-    bemBlock: _react2.default.PropTypes.string
+    bemNamespace: _propTypes2.default.string,
+    bemBlock: _propTypes2.default.string
   },
 
   childContextTypes: {
-    bemNamespace: _react2.default.PropTypes.string,
-    bemBlock: _react2.default.PropTypes.string
+    bemNamespace: _propTypes2.default.string,
+    bemBlock: _propTypes2.default.string
   },
 
   getChildContext: function getChildContext() {

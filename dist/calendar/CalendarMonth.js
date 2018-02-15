@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -50,19 +54,19 @@ var CalendarMonth = _react2.default.createClass({
   mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {
-    dateComponent: _react2.default.PropTypes.func,
-    disableNavigation: _react2.default.PropTypes.bool,
+    dateComponent: _propTypes2.default.func,
+    disableNavigation: _propTypes2.default.bool,
     enabledRange: _CustomPropTypes2.default.momentRange,
     firstOfMonth: _CustomPropTypes2.default.moment,
-    firstOfWeek: _react2.default.PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6]),
-    hideSelection: _react2.default.PropTypes.bool,
-    highlightedDate: _react2.default.PropTypes.object,
-    highlightedRange: _react2.default.PropTypes.object,
-    onMonthChange: _react2.default.PropTypes.func,
-    onYearChange: _react2.default.PropTypes.func,
+    firstOfWeek: _propTypes2.default.oneOf([0, 1, 2, 3, 4, 5, 6]),
+    hideSelection: _propTypes2.default.bool,
+    highlightedDate: _propTypes2.default.object,
+    highlightedRange: _propTypes2.default.object,
+    onMonthChange: _propTypes2.default.func,
+    onYearChange: _propTypes2.default.func,
     value: _CustomPropTypes2.default.momentOrMomentRange,
-    locale: _react2.default.PropTypes.string,
-    removeOtherMonthDates: _react2.default.PropTypes.bool
+    locale: _propTypes2.default.string,
+    removeOtherMonthDates: _propTypes2.default.bool
   },
 
   setLocale: function setLocale(locale) {

@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -26,8 +30,8 @@ var CalendarSelection = _react2.default.createClass({
   mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {
-    modifier: _react2.default.PropTypes.string,
-    pending: _react2.default.PropTypes.bool.isRequired
+    modifier: _propTypes2.default.string,
+    pending: _propTypes2.default.bool.isRequired
   },
 
   render: function render() {

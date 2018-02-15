@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -24,8 +28,8 @@ var Legend = _react2.default.createClass({
   mixins: [_BemMixin2.default, _reactAddonsPureRenderMixin2.default],
 
   propTypes: {
-    selectedLabel: _react2.default.PropTypes.string.isRequired,
-    stateDefinitions: _react2.default.PropTypes.object.isRequired
+    selectedLabel: _propTypes2.default.string.isRequired,
+    stateDefinitions: _propTypes2.default.object.isRequired
   },
 
   render: function render() {

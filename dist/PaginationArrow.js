@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
 var _BemMixin = require('./utils/BemMixin');
 
 var _BemMixin2 = _interopRequireDefault(_BemMixin);
@@ -28,9 +32,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var PaginationArrow = _react2.default.createClass({
+var PaginationArrow = (0, _createReactClass2.default)({
   displayName: 'PaginationArrow',
-
   mixins: [_BemMixin2.default, _reactAddonsPureRenderMixin2.default],
 
   propTypes: {

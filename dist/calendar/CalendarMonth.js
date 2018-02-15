@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -48,9 +52,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var CalendarMonth = _react2.default.createClass({
+var CalendarMonth = (0, _createReactClass2.default)({
   displayName: 'CalendarMonth',
-
   mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {

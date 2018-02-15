@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
 var _immutable = require('immutable');
 
 var _immutable2 = _interopRequireDefault(_immutable);
@@ -46,9 +50,8 @@ var _CalendarSelection2 = _interopRequireDefault(_CalendarSelection);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CalendarDate = _react2.default.createClass({
+var CalendarDate = (0, _createReactClass2.default)({
   displayName: 'CalendarDate',
-
   mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {

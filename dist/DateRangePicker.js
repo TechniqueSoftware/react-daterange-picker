@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -71,9 +75,8 @@ var absoluteMaximum = (0, _moment2.default)(new Date(8640000000000000 / 2)).star
 
 function noop() {}
 
-var DateRangePicker = _react2.default.createClass({
+var DateRangePicker = (0, _createReactClass2.default)({
   displayName: 'DateRangePicker',
-
   mixins: [_BemMixin2.default, _reactAddonsPureRenderMixin2.default],
 
   propTypes: {

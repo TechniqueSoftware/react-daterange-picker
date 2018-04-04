@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import createReactClass from 'create-react-class';
 import moment from 'moment';
-import {} from 'moment-range';
 import Immutable from 'immutable';
 import calendar from 'calendar';
 
@@ -18,8 +17,7 @@ import PaginationArrow from './PaginationArrow';
 import isMomentRange from './utils/isMomentRange';
 import hasUpdatedValue from './utils/hasUpdatedValue';
 import { getYearMonth, getYearMonthProps } from './utils/getYearMonth';
-
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import PureRenderMixin from "./utils/PureRenderMixin";
 
 const absoluteMinimum = moment(new Date(-8640000000000000 / 2)).startOf('day');
 const absoluteMaximum = moment(new Date(8640000000000000 / 2)).startOf('day');

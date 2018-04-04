@@ -44,17 +44,13 @@ var _isMomentRange = require('../utils/isMomentRange');
 
 var _isMomentRange2 = _interopRequireDefault(_isMomentRange);
 
-var _PureRenderMixin = require('../utils/PureRenderMixin');
-
-var _PureRenderMixin2 = _interopRequireDefault(_PureRenderMixin);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var CalendarMonth = (0, _createReactClass2.default)({
   displayName: 'CalendarMonth',
-  mixins: [_BemMixin2.default, _PureRenderMixin2.default],
+  mixins: [_BemMixin2.default],
 
   propTypes: {
     dateComponent: _propTypes2.default.func,

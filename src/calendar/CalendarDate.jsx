@@ -154,18 +154,16 @@ const CalendarDate = createReactClass({
   },
 
   getClassNamesFromStates(states){
-
     const classNames = {};
-
-    states.map(function (state) {
-      const className = state.get('className');
-      if (className) {
-        classNames[className] = true;
-      }
-    });
-
+    if (Array.isArray(states)) {
+      states.map(function (state) {
+        const className = state.get('className');
+        if (className) {
+          classNames[className] = true;
+        }
+      });
+    }
     return classNames;
-
   },
 
   render() {
@@ -181,7 +179,7 @@ const CalendarDate = createReactClass({
       isHighlightedRangeEnd,
       isInHighlightedRange,
       firstOfMonth,
-      removeOtherMonthDates
+      removeOtherMonthDates,
     } = this.props;
 
     let bemModifiers = this.getBemModifiers();
@@ -252,7 +250,7 @@ const CalendarDate = createReactClass({
     }
 
     if (otherMonth && removeOtherMonthDates) {
-      return <td className={this.cx({element: 'Date', modifiers: {otherMonth}})}/>
+      return <td className={this.cx({element: 'Date', modifiers: {otherMonth}})}/>;
     }
 
     return (
@@ -278,3 +276,4 @@ const CalendarDate = createReactClass({
 });
 
 export default CalendarDate;
+

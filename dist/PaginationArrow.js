@@ -22,10 +22,6 @@ var _BemMixin = require('./utils/BemMixin');
 
 var _BemMixin2 = _interopRequireDefault(_BemMixin);
 
-var _reactAddonsPureRenderMixin = require('react-addons-pure-render-mixin');
-
-var _reactAddonsPureRenderMixin2 = _interopRequireDefault(_reactAddonsPureRenderMixin);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -34,7 +30,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var PaginationArrow = (0, _createReactClass2.default)({
   displayName: 'PaginationArrow',
-  mixins: [_BemMixin2.default, _reactAddonsPureRenderMixin2.default],
+  mixins: [_BemMixin2.default],
 
   propTypes: {
     disabled: _propTypes2.default.bool,

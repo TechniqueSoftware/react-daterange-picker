@@ -1,9 +1,10 @@
-React Daterange Picker
+ClubOS React Daterange Picker
 ======================
 
-A React based date range picker.
+A React based date range picker forked from [http://onefinestay.github.io/react-daterange-picker/](http://onefinestay.github.io/react-daterange-picker/)
 
-[Demo](http://onefinestay.github.io/react-daterange-picker/)
+This project was forked and has made several updates to accommodate our needs for the Package Agreement Freeze Page 
+stylings/format. We've also migrated the project to support React 16. 
 
 ## Features
 
@@ -12,38 +13,12 @@ A React based date range picker.
 * Show any number of months at the same time.
 * Visually represent half day states.
 
-## React Version
-
-As of version 1.0.0, the react-daterange-picker component supports React 0.14. At this time React 0.15 is not supported.
-
-If you wish to user an older version of React, please use react-daterange-picker v0.12.x or below.
-
-## Contribute
-
-Please feel to contribute to this project by making pull requests. You can see a
-list of tasks that can be worked on in the [issues list](https://github.com/onefinestay/react-daterange-picker/issues).
-
-Before a pull request can be merged, ensure that you have linted your files and all tests are passing -
-
-```shell
-npm run lint
-npm run test
-```
-
-### Publishing
-
-If you have been added as a project contributor and wish to publish a new release -
-
-  - Ensure that you have added yourself to the `package.json` contributors list
-  - Bump the npm version as appropriate, following [SemVer](http://semver.org/) conventions
-  - Update the [Demo](http://onefinestay.github.io/react-daterange-picker/) by running `npm run deploy-example`
-
 ### Building example page
 
 Once you have the repository cloned run the following commands to get started:
 
 ```shell
-npm install react@0.14 react-dom@0.14
+npm install react react-dom prop-types
 npm install
 npm run develop
 ```

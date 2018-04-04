@@ -20,15 +20,15 @@ var _BemMixin = require('./utils/BemMixin');
 
 var _BemMixin2 = _interopRequireDefault(_BemMixin);
 
-var _reactAddonsPureRenderMixin = require('react-addons-pure-render-mixin');
+var _PureRenderMixin = require('./utils/PureRenderMixin');
 
-var _reactAddonsPureRenderMixin2 = _interopRequireDefault(_reactAddonsPureRenderMixin);
+var _PureRenderMixin2 = _interopRequireDefault(_PureRenderMixin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Legend = (0, _createReactClass2.default)({
   displayName: 'Legend',
-  mixins: [_BemMixin2.default, _reactAddonsPureRenderMixin2.default],
+  mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {
     selectedLabel: _propTypes2.default.string.isRequired,

@@ -146,6 +146,7 @@ gulp.task('watch-example-js', function() {
 gulp.task('build-example', function() {
   var markup = '<!document html>' + ReactDOMServer.renderToString(<ExampleBase />);
   // write file
+  console.warn(markup);
   fs.writeFileSync('./example/index.html', markup);
 });
 

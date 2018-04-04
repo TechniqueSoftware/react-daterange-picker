@@ -20,8 +20,6 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-require('moment-range');
-
 var _immutable = require('immutable');
 
 var _immutable2 = _interopRequireDefault(_immutable);
@@ -64,9 +62,9 @@ var _hasUpdatedValue2 = _interopRequireDefault(_hasUpdatedValue);
 
 var _getYearMonth = require('./utils/getYearMonth');
 
-var _reactAddonsPureRenderMixin = require('react-addons-pure-render-mixin');
+var _PureRenderMixin = require('./utils/PureRenderMixin');
 
-var _reactAddonsPureRenderMixin2 = _interopRequireDefault(_reactAddonsPureRenderMixin);
+var _PureRenderMixin2 = _interopRequireDefault(_PureRenderMixin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -77,7 +75,7 @@ function noop() {}
 
 var DateRangePicker = (0, _createReactClass2.default)({
   displayName: 'DateRangePicker',
-  mixins: [_BemMixin2.default, _reactAddonsPureRenderMixin2.default],
+  mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {
     allowNavigationToDisabledMonths: _propTypes2.default.bool,

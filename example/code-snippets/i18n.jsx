@@ -1,3 +1,4 @@
+import createReactClass from 'create-react-class';
 import React from 'react';
 
 import DateRangePicker from 'react-daterange-picker';
@@ -18,7 +19,7 @@ require('moment/locale/de');
  */
 moment.locale('en');
 
-const DatePicker = React.createClass({
+const DatePicker = createReactClass({
   getInitialState() {
     return {
       value: null,

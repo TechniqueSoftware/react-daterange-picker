@@ -9,11 +9,10 @@ import Immutable from 'immutable';
 import BemMixin from '../utils/BemMixin';
 import CustomPropTypes from '../utils/CustomPropTypes';
 import isMomentRange from '../utils/isMomentRange';
-import PureRenderMixin from '../utils/PureRenderMixin';
 
 const CalendarMonth = createReactClass({
   displayName: 'CalendarMonth',
-  mixins: [BemMixin, PureRenderMixin],
+  mixins: [BemMixin],
 
   propTypes: {
     dateComponent: PropTypes.func,
@@ -28,7 +27,7 @@ const CalendarMonth = createReactClass({
     onYearChange: PropTypes.func,
     value: CustomPropTypes.momentOrMomentRange,
     locale: PropTypes.string,
-    removeOtherMonthDates: PropTypes.bool
+    removeOtherMonthDates: PropTypes.bool,
   },
 
   setLocale(locale) {

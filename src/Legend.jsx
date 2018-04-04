@@ -4,9 +4,7 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 
 import BemMixin from './utils/BemMixin';
-
-import PureRenderMixin from 'react-addons-pure-render-mixin';
-
+import PureRenderMixin from "./utils/PureRenderMixin";
 
 const Legend = createReactClass({
   displayName: 'Legend',

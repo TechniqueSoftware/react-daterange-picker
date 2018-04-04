@@ -183,16 +183,15 @@ var CalendarDate = (0, _createReactClass2.default)({
     return { disabled: disabled, highlighted: highlighted, selected: selected };
   },
   getClassNamesFromStates: function getClassNamesFromStates(states) {
-
     var classNames = {};
-
-    states.map(function (state) {
-      var className = state.get('className');
-      if (className) {
-        classNames[className] = true;
-      }
-    });
-
+    if (Array.isArray(states)) {
+      states.map(function (state) {
+        var className = state.get('className');
+        if (className) {
+          classNames[className] = true;
+        }
+      });
+    }
     return classNames;
   },
   render: function render() {

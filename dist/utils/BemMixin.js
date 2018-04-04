@@ -8,10 +8,6 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _bemCx = require('./bemCx');
 
 var _bemCx2 = _interopRequireDefault(_bemCx);

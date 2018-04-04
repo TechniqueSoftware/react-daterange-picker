@@ -184,7 +184,7 @@ var CalendarDate = (0, _createReactClass2.default)({
   },
   getClassNamesFromStates: function getClassNamesFromStates(states) {
     var classNames = {};
-    if (Array.isArray(states)) {
+    if (states.map) {
       states.map(function (state) {
         var className = state.get('className');
         if (className) {

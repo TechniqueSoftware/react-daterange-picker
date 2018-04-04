@@ -155,7 +155,7 @@ const CalendarDate = createReactClass({
 
   getClassNamesFromStates(states){
     const classNames = {};
-    if (Array.isArray(states)) {
+    if (states.map) {
       states.map(function (state) {
         const className = state.get('className');
         if (className) {

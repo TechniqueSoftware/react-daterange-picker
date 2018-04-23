@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
-import {} from 'moment-range';
 import Immutable from 'immutable';
 import calendar from 'calendar';
 
@@ -16,47 +17,47 @@ import PaginationArrow from './PaginationArrow';
 import isMomentRange from './utils/isMomentRange';
 import hasUpdatedValue from './utils/hasUpdatedValue';
 import { getYearMonth, getYearMonthProps } from './utils/getYearMonth';
-
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import PureRenderMixin from "./utils/PureRenderMixin";
 
 const absoluteMinimum = moment(new Date(-8640000000000000 / 2)).startOf('day');
 const absoluteMaximum = moment(new Date(8640000000000000 / 2)).startOf('day');
 
 function noop() {}
 
-const DateRangePicker = React.createClass({
+const DateRangePicker = createReactClass({
+  displayName: 'DateRangePicker',
   mixins: [BemMixin, PureRenderMixin],
 
   propTypes: {
-    allowNavigationToDisabledMonths: React.PropTypes.bool,
-    bemBlock: React.PropTypes.string,
-    bemNamespace: React.PropTypes.string,
-    className: React.PropTypes.string,
-    dateStates: React.PropTypes.array, // an array of date ranges and their states
-    defaultState: React.PropTypes.string,
-    disableNavigation: React.PropTypes.bool,
-    firstOfWeek: React.PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6]),
-    helpMessage: React.PropTypes.string,
-    initialDate: React.PropTypes.instanceOf(Date),
-    initialFromValue: React.PropTypes.bool,
-    initialMonth: React.PropTypes.number, // Overrides values derived from initialDate/initialRange
-    initialRange: React.PropTypes.object,
-    initialYear: React.PropTypes.number, // Overrides values derived from initialDate/initialRange
-    locale: React.PropTypes.string,
-    maximumDate: React.PropTypes.instanceOf(Date),
-    minimumDate: React.PropTypes.instanceOf(Date),
-    numberOfCalendars: React.PropTypes.number,
-    onHighlightDate: React.PropTypes.func, // triggered when a date is highlighted (hovered)
-    onHighlightRange: React.PropTypes.func, // triggered when a range is highlighted (hovered)
-    onSelect: React.PropTypes.func, // triggered when a date or range is selectec
-    onSelectStart: React.PropTypes.func, // triggered when the first date in a range is selected
-    paginationArrowComponent: React.PropTypes.func,
-    removeOtherMonthDates: React.PropTypes.bool,
-    selectedLabel: React.PropTypes.string,
-    selectionType: React.PropTypes.oneOf(['single', 'range']),
-    singleDateRange: React.PropTypes.bool,
-    showLegend: React.PropTypes.bool,
-    stateDefinitions: React.PropTypes.object,
+    allowNavigationToDisabledMonths: PropTypes.bool,
+    bemBlock: PropTypes.string,
+    bemNamespace: PropTypes.string,
+    className: PropTypes.string,
+    dateStates: PropTypes.array, // an array of date ranges and their states
+    defaultState: PropTypes.string,
+    disableNavigation: PropTypes.bool,
+    firstOfWeek: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6]),
+    helpMessage: PropTypes.string,
+    initialDate: PropTypes.instanceOf(Date),
+    initialFromValue: PropTypes.bool,
+    initialMonth: PropTypes.number, // Overrides values derived from initialDate/initialRange
+    initialRange: PropTypes.object,
+    initialYear: PropTypes.number, // Overrides values derived from initialDate/initialRange
+    locale: PropTypes.string,
+    maximumDate: PropTypes.instanceOf(Date),
+    minimumDate: PropTypes.instanceOf(Date),
+    numberOfCalendars: PropTypes.number,
+    onHighlightDate: PropTypes.func, // triggered when a date is highlighted (hovered)
+    onHighlightRange: PropTypes.func, // triggered when a range is highlighted (hovered)
+    onSelect: PropTypes.func, // triggered when a date or range is selectec
+    onSelectStart: PropTypes.func, // triggered when the first date in a range is selected
+    paginationArrowComponent: PropTypes.func,
+    removeOtherMonthDates: PropTypes.bool,
+    selectedLabel: PropTypes.string,
+    selectionType: PropTypes.oneOf(['single', 'range']),
+    singleDateRange: PropTypes.bool,
+    showLegend: PropTypes.bool,
+    stateDefinitions: PropTypes.object,
     value: CustomPropTypes.momentOrMomentRange,
   },
 

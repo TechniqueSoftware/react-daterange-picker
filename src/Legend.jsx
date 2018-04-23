@@ -1,16 +1,18 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
+import createReactClass from 'create-react-class';
+
 import BemMixin from './utils/BemMixin';
+import PureRenderMixin from "./utils/PureRenderMixin";
 
-import PureRenderMixin from 'react-addons-pure-render-mixin';
-
-
-const Legend = React.createClass({
+const Legend = createReactClass({
+  displayName: 'Legend',
   mixins: [BemMixin, PureRenderMixin],
 
   propTypes: {
-    selectedLabel: React.PropTypes.string.isRequired,
-    stateDefinitions: React.PropTypes.object.isRequired,
+    selectedLabel: PropTypes.string.isRequired,
+    stateDefinitions: PropTypes.object.isRequired,
   },
 
   render() {

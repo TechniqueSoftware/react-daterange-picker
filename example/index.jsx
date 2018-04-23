@@ -1,5 +1,7 @@
 /* eslint-disable react/no-multi-comp */
 
+import createReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 import {} from 'moment-range';
@@ -25,9 +27,9 @@ function processCodeSnippet(src) {
   return lines.join('\n');
 }
 
-const DatePickerRange = React.createClass({
+const DatePickerRange = createReactClass({
   propTypes: {
-    value: React.PropTypes.object,
+    value: PropTypes.object,
   },
 
   getInitialState() {
@@ -61,7 +63,7 @@ const DatePickerRange = React.createClass({
 });
 
 
-const DatePickerSingle = React.createClass({
+const DatePickerSingle = createReactClass({
   getInitialState() {
     return {
       value: "",
@@ -89,7 +91,7 @@ const DatePickerSingle = React.createClass({
   },
 });
 
-const DatePickerSingleWithSetDateButtons = React.createClass({
+const DatePickerSingleWithSetDateButtons = createReactClass({
   getInitialState() {
     return {
       value: null,
@@ -128,7 +130,7 @@ const DatePickerSingleWithSetDateButtons = React.createClass({
   },
 });
 
-const DatePickerRangeWithSetRangeButtons = React.createClass({
+const DatePickerRangeWithSetRangeButtons = createReactClass({
   getInitialState() {
     return {
       value: null,
@@ -178,7 +180,7 @@ const DatePickerRangeWithSetRangeButtons = React.createClass({
 var mainCodeSnippet = fs.readFileSync(__dirname + '/code-snippets/main.jsx', 'utf8');
 var i18nCodeSnippet = fs.readFileSync(__dirname + '/code-snippets/i18n.jsx', 'utf8');
 
-const Index = React.createClass({
+const Index = createReactClass({
   getInitialState() {
     return {
       locale: 'en',
@@ -249,7 +251,7 @@ const Index = React.createClass({
             <DatePickerRange
               firstOfWeek={1}
               numberOfCalendars={2}
-              removeOtherMonthDates
+              removeOtherMonthDates={true}
               selectionType='range'
               minimumDate={new Date()}
               maximumDate={moment().add(2, 'years').toDate()}
@@ -336,7 +338,8 @@ const Index = React.createClass({
             <div className="example">
               <h4>Date Range Picker Allow Navigation Disabled Months</h4>
               <DatePickerRange
-                allowNavigationToDisabledMonths
+                removeOtherMonthDates={false}
+                allowNavigationToDisabledMonths={true}
                 numberOfCalendars={2}
                 selectionType="range"
                 singleDateRange={true}
@@ -345,7 +348,7 @@ const Index = React.createClass({
             <div className="example">
               <h4>Disable other month dates from showing</h4>
               <DatePickerRange
-                removeOtherMonthDates
+                removeOtherMonthDates={true}
                 numberOfCalendars={2}
                 selectionType="range"
                 singleDateRange={true}

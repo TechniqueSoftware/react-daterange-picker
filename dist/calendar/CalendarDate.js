@@ -4,9 +4,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
 
 var _immutable = require('immutable');
 
@@ -42,37 +50,36 @@ var _CalendarSelection2 = _interopRequireDefault(_CalendarSelection);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CalendarDate = _react2.default.createClass({
+var CalendarDate = (0, _createReactClass2.default)({
   displayName: 'CalendarDate',
-
   mixins: [_BemMixin2.default, _PureRenderMixin2.default],
 
   propTypes: {
     date: _CustomPropTypes2.default.moment,
 
-    removeOtherMonthDates: _react2.default.PropTypes.bool,
+    removeOtherMonthDates: _propTypes2.default.bool,
 
-    firstOfMonth: _react2.default.PropTypes.object.isRequired,
+    firstOfMonth: _propTypes2.default.object.isRequired,
 
-    isSelectedDate: _react2.default.PropTypes.bool,
-    isSelectedRangeStart: _react2.default.PropTypes.bool,
-    isSelectedRangeEnd: _react2.default.PropTypes.bool,
-    isInSelectedRange: _react2.default.PropTypes.bool,
+    isSelectedDate: _propTypes2.default.bool,
+    isSelectedRangeStart: _propTypes2.default.bool,
+    isSelectedRangeEnd: _propTypes2.default.bool,
+    isInSelectedRange: _propTypes2.default.bool,
 
-    isHighlightedDate: _react2.default.PropTypes.bool,
-    isHighlightedRangeStart: _react2.default.PropTypes.bool,
-    isHighlightedRangeEnd: _react2.default.PropTypes.bool,
-    isInHighlightedRange: _react2.default.PropTypes.bool,
+    isHighlightedDate: _propTypes2.default.bool,
+    isHighlightedRangeStart: _propTypes2.default.bool,
+    isHighlightedRangeEnd: _propTypes2.default.bool,
+    isInHighlightedRange: _propTypes2.default.bool,
 
-    highlightedDate: _react2.default.PropTypes.object,
-    dateStates: _react2.default.PropTypes.instanceOf(_immutable2.default.List),
-    isDisabled: _react2.default.PropTypes.bool,
-    isToday: _react2.default.PropTypes.bool,
+    highlightedDate: _propTypes2.default.object,
+    dateStates: _propTypes2.default.instanceOf(_immutable2.default.List),
+    isDisabled: _propTypes2.default.bool,
+    isToday: _propTypes2.default.bool,
 
-    dateRangesForDate: _react2.default.PropTypes.func,
-    onHighlightDate: _react2.default.PropTypes.func,
-    onUnHighlightDate: _react2.default.PropTypes.func,
-    onSelectDate: _react2.default.PropTypes.func
+    dateRangesForDate: _propTypes2.default.func,
+    onHighlightDate: _propTypes2.default.func,
+    onUnHighlightDate: _propTypes2.default.func,
+    onSelectDate: _propTypes2.default.func
   },
 
   getInitialState: function getInitialState() {
@@ -176,16 +183,15 @@ var CalendarDate = _react2.default.createClass({
     return { disabled: disabled, highlighted: highlighted, selected: selected };
   },
   getClassNamesFromStates: function getClassNamesFromStates(states) {
-
     var classNames = {};
-
-    states.map(function (state) {
-      var className = state.get('className');
-      if (className) {
-        classNames[className] = true;
-      }
-    });
-
+    if (states.map) {
+      states.map(function (state) {
+        var className = state.get('className');
+        if (className) {
+          classNames[className] = true;
+        }
+      });
+    }
     return classNames;
   },
   render: function render() {

@@ -10,7 +10,8 @@ import areMomentRangesEqual from '../utils/areMomentRangesEqual';
 import Immutable from 'immutable';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
+import TestUtils from 'react-dom/test-utils';
 import _ from 'underscore';
 
 
@@ -24,7 +25,7 @@ describe('The DateRangePicker component', function () {
     };
 
     this.useShallowRenderer = (props) => {
-      this.shallowRenderer = TestUtils.createRenderer();
+      this.shallowRenderer = new ShallowRenderer();
       this.shallowRenderer.render(getDateRangePicker(props));
       this.renderedComponent = this.shallowRenderer.getRenderOutput();
     };

@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
+import TestUtils from 'react-dom/test-utils';
 import CalendarMonth from '../CalendarMonth';
 import CalendarDate from '../CalendarDate';
 import moment from 'moment';
-import {} from 'moment-range';
 import _ from 'underscore';
+
 
 
 describe('The CalendarMonth Component', function () {
@@ -44,7 +45,7 @@ describe('The CalendarMonth Component', function () {
     };
 
     this.useShallowRenderer = (props) => {
-      this.shallowRenderer = TestUtils.createRenderer();
+      this.shallowRenderer = new ShallowRenderer();
       this.shallowRenderer.render(getCalendarMonth(props));
       this.renderedComponent = this.shallowRenderer.getRenderOutput();
       this.container = this.renderedComponent.props.children[0];

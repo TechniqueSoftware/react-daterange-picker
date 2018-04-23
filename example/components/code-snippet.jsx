@@ -1,13 +1,15 @@
 /* global hljs */
+import createReactClass from 'create-react-class';
 import React from 'react';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 
-const CodeSnippet = React.createClass({
+const CodeSnippet = createReactClass({
   propTypes: {
-    children: React.PropTypes.node.isRequired,
-    language: React.PropTypes.string.isRequired,
-    toggle: React.PropTypes.bool,
-    visible: React.PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    language: PropTypes.string.isRequired,
+    toggle: PropTypes.bool,
+    visible: PropTypes.bool,
   },
 
   getDefaultProps() {

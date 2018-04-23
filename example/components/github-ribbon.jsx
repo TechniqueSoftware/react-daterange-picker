@@ -1,6 +1,7 @@
+import createReactClass from 'create-react-class';
 import React from 'react';
 
-const GithubRibbon = React.createClass({
+const GithubRibbon = createReactClass({
   render() {
     const style = {
       position: 'absolute',
